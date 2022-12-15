@@ -15,6 +15,7 @@ ion-menu.md ion-list {
 
 ion-menu.md ion-note {
   margin-bottom: 30px;
+  color: var(--ion-color-blueduoc);
 }
 
 ion-menu.md ion-list-header,
@@ -22,6 +23,7 @@ ion-menu.md ion-note {
   padding-left: 10px;
 }
 
+ /** barrita despues del cerrar sesión**/
 ion-menu.md ion-list#inbox-list {
   border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
 }
@@ -29,15 +31,16 @@ ion-menu.md ion-list#inbox-list {
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
   font-weight: 600;
-
   min-height: 20px;
+  color: var(--ion-color-blueduoc);
 }
 
 ion-menu.md ion-list#labels-list ion-list-header {
   font-size: 16px;
 
   margin-bottom: 18px;
-
+  
+  /** color para el texto etiqueta **/
   color: #757575;
 
   min-height: 26px;
@@ -49,16 +52,19 @@ ion-menu.md ion-item {
   border-radius: 4px;
 }
 
+  /** color para el item seleccionado **/
 ion-menu.md ion-item.selected {
   --background: rgba(var(--ion-color-primary-rgb), 0.14);
 }
 
+  /** color para el icono del item seleccionado **/
 ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: var(--ion-color-yellowduoc);
 }
 
+  /** color para el icono del item SIN seleccionado **/
 ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+  color: var(--ion-color-blueduoc);
 }
 
 ion-menu.md ion-item ion-label {
@@ -84,13 +90,15 @@ ion-menu.ios ion-item {
   --min-height: 50px;
 }
 
+  /** color para el icono del item seleccionado - IOS **/
 ion-menu.ios ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: var(--ion-color-yellowduoc);
 }
 
+  /** color para el icono del item SIN seleccionar - IOS **/
 ion-menu.ios ion-item ion-icon {
   font-size: 24px;
-  color: #73849a;
+  color: var(--ion-color-blueduoc);
 }
 
 ion-menu.ios ion-list#labels-list ion-list-header {
@@ -111,9 +119,14 @@ ion-note {
   display: inline-block;
   font-size: 16px;
 
-  color: var(--ion-color-medium-shade);
+  color: var(--ion-color-blueduoc);
 }
 
+  /** color para el texto del item seleccionado **/
 ion-item.selected {
-  --color: var(--ion-color-primary);
+  --color: var(--ion-color-yellowduoc);
+}
+  /** color para el texto del item SIN seleccionado **/
+ ion-item {
+ --color: var(--ion-color-blueduoc);
 }
