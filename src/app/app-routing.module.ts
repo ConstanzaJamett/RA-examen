@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'portada-app',
     pathMatch: 'full'
   },
   {
@@ -39,6 +39,20 @@ const routes: Routes = [
     path: 'error404',
     loadChildren: () => import('./pages/error404/error404.module').then( m => m.Error404PageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'portada-app',
+    loadChildren: () => import('./pages/portada-app/portada-app.module').then( m => m.PortadaAppPageModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'error404'
+  },
+
+
 ];
 
 @NgModule({
