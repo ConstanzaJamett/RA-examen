@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { RegistrarClasePageRoutingModule } from './registrar-clase-routing.module';
 
 import { RegistrarClasePage } from './registrar-clase.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RegistrarClasePageRoutingModule
+    RegistrarClasePageRoutingModule,
+    //Se agrego el componente
+    ComponentsModule
+    //Fin componente    
   ],
   declarations: [RegistrarClasePage]
 })

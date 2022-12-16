@@ -1,10 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <br> <br>
+  <div>
+    <img src="assets/img/bienvenida2.jpeg" alt="">
+  </div> 
+  <br>
+
   <form [formGroup]="credentials" (ngSubmit)="login()">
     <ion-item class="ion-margin-bottom">
       <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
@@ -16,7 +16,20 @@
       <ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors">La contraseña debe tener al menos 6 caracteres</ion-note>
     </ion-item>
 
-    <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>
-    <ion-button expand="full" type="button" (click)="register()">Crear cuenta</ion-button>
+    <div id="container" style="text-align: center;">
+      <button ion-button class="btn2" type="submit" [disabled]="!credentials.valid">Ingresar</button>
+    </div>
+
+    <br>
+    <div id="container" style="text-align: center;">
+      <button ion-button class="btn2" type="button" (click)="register()">Crear cuenta</button>
+    </div>
+
   </form>
+
+  <br> <br> <br>
+  <div id="container2" style="text-align: center;">
+    <img src="assets/img/duocPequeno.jpeg" alt="">
+  </div>
+
 </ion-content>

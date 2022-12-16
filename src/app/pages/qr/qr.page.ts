@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QrPage implements OnInit {
 
+  //Se agrego el componente
+  pageTitle = 'Generador de clase';
+  isNotHome = true;
+  //Fin componente
+
   public loaded = false;
   constructor() { }
 

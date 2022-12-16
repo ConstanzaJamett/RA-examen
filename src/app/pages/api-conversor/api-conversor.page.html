@@ -1,38 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Conversor de dinero</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- Borrar todo el ion header y pegar -->
+<app-header [isNotHome]="isNotHome" [pageTitle]="pageTitle"></app-header>
 
-<ion-content >
+<ion-content [fullscreen]="true">
 
-  <div *ngIf="conversionDolar > 0; else loadingBlock">
-    <ion-card class="ion-padding">
-        <ion-label>Pesos Chilenos (CLP)</ion-label>
-        <ion-input inputmode="numeric" type="number" [(ngModel)]="entradaPesos" id="entradaPesos"></ion-input>
-        <ion-select placeholder="Moneda" [(ngModel)]="seleccionMoneda" id="seleccionMoneda">
-          <ion-select-option value="dolar" default="true">($) Dolar</ion-select-option>
-          <ion-select-option value="euro">(€) Euro</ion-select-option>
-        </ion-select>
-        <ion-button color="warning" expand="block" [attr.disabled]="seleccionMoneda === undefined || entradaPesos === undefined || entradaPesos <= 0" (click)="convertir()">Transformar</ion-button>
-    </ion-card>
-    <div *ngIf="salidaConversion !== undefined">
-      <ion-card class="ion-padding">
-          <ion-label color="dark">{{salidaConversion}}</ion-label>
-      </ion-card>
-    </div>
-  </div>
-  <ng-template #loadingBlock>
-    <ion-card class="ion-padding">
-      <ion-label>Consultando datos para conversión...</ion-label>
-    </ion-card>
-  </ng-template>
+  <ion-card>
+    <h1>¡¡...pegar api conversor...!!</h1>
+    <img src="" alt="">
+    <!-- <ion-button color= "warning" href="/home">Ir a home </ion-button> -->
+  </ion-card>
 
-  <div id="container" style="text-align: center;">
-    <br>
-  <button ion-button fill="outline" [routerLink]="['/inicio']" class="btn">Volver al inicio</button>
-</div>
-</ion-content><ion-content >
+</ion-content>

@@ -10,6 +10,11 @@ import { AvatarService } from 'src/app/services/avatar.service';
 })
 export class VerAsistenciaPage {
 
+  //Se agrego el componente
+  pageTitle = 'Lista de asistencia';
+  isNotHome = true;
+  //Fin componente
+
   asistencia : Asistencia[] = [];
 
   constructor(private usuarioService:AvatarService, private modalCtrl:ModalController, private alertCtrl:AlertController,

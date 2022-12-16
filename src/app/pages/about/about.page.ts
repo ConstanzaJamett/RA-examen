@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPage implements OnInit {
 
-//Se agrego el componente
-  pageTitle = 'About';
+  //Se agrego el componente
+  pageTitle = '';
   isNotHome = true;
-//Fin componente
+  //Fin componente
 
   constructor() { }
 

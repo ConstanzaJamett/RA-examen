@@ -72,10 +72,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/qr/qr.module').then( m => m.QrPageModule)
   },
   {
-    path: 'codigo',
-    loadChildren: () => import('./pages/codigo/codigo.module').then( m => m.CodigoPageModule)
-  },
-  {
     path: 'ver-clase',
     loadChildren: () => import('./pages/ver-clase/ver-clase.module').then( m => m.VerClasePageModule)
   },
@@ -86,9 +82,7 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'error404'
   },
-
-
-
+  
 ];
 
 @NgModule({

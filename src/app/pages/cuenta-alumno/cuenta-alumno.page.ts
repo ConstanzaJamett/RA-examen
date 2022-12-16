@@ -12,6 +12,11 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 })
 export class CuentaAlumnoPage implements OnInit {
 
+  //Se agrego el componente
+  pageTitle = 'Crear cuenta de alumno';
+  isNotHome = true;
+  //Fin componente
+
   @Input() id :string;
   usuario: Usuario = {
     uid :'',

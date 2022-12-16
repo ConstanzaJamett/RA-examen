@@ -11,6 +11,11 @@ import { Router } from '@angular/router';
 })
 export class AsistenciaPage implements OnInit {
 
+  //Se agrego el componente
+  pageTitle = 'Asistencia';
+  isNotHome = true;
+  //Fin componente
+
   usuario: Usuario = null;
 
   name: string;

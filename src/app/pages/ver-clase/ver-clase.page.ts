@@ -12,6 +12,11 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 })
 export class VerClasePage implements OnInit {
 
+  //Se agrego el componente
+  pageTitle = 'Ver clase';
+  isNotHome = true;
+  //Fin componente
+
   constructor() { }
 
   ngOnInit() {

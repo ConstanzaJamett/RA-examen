@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiClimaPage implements OnInit {
 
+  //Se agrego el componente
+  pageTitle = 'Clima';
+  isNotHome = true;
+  //Fin componente
+
   constructor() { }
 
   ngOnInit() {

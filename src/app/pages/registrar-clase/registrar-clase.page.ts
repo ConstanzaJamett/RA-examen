@@ -16,6 +16,11 @@ import { Auth } from '@angular/fire/auth';
 })
 export class RegistrarClasePage implements OnInit {
 
+  //Se agrego el componente
+  pageTitle = 'Clases del profesor';
+  isNotHome = true;
+  //Fin componente
+
   profile:any=null;
   usuario: Usuario = null;
   @Input() id :string;

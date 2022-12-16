@@ -1,19 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Mi cuenta</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- Borrar todo el ion header y pegar -->
+<app-header [isNotHome]="isNotHome" [pageTitle]="pageTitle"></app-header>
 
 <ion-content>
-
   <div id="container" style="text-align: center;">
     <img src="assets/img/perfil1.jpeg" alt="">
-    <!-- esto enruta con un boton routlink (app) -->
-    <button ion-button fill="outline" [routerLink]="['/inicio']" class="btn">Volver al inicio</button>
   </div>
 
+  <br> <br>
+  <div id="container" style="text-align: center;">
+    <button ion-button fill="outline" [routerLink]="['/inicio']" class="btn">Volver al inicio</button>
+  </div>
 
 </ion-content>
