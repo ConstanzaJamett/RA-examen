@@ -8,8 +8,9 @@
 
   <div class="container">
     <ion-list>
+      <br> <br>
       <ion-label>
-        Código:<ion-input type="text" [(ngModel)]="asistencia.codigo"></ion-input>
+        Código:<ion-input type="text" [(ngModel)]="asistencia.codigo"> </ion-input>
       </ion-label>      
       <ion-label>
         Nombre alumno:<ion-input type="text" [(ngModel)]="asistencia.nombreAlumno"></ion-input>
@@ -26,8 +27,8 @@
     </ion-list>
   </div>
 
+  <br>
   <div id="container" style="text-align: center;">
-    <!-- <img src="assets/img/QR1.jpeg" alt=""> -->
     <button ion-button fill="outline" class="btn" (click)="addAsistencia()">Guardar asistencia</button>
   </div>
 

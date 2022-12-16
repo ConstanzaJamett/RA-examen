@@ -3,17 +3,35 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Clase</ion-title>
+    <ion-title>Clases del profesor</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="rol=='profesor'" [fullscreen]="true">
+<ion-content [fullscreen]="true">
 
+  <br> <br>
   <div id="container" style="text-align: center;">
-    <img src="assets/img/QR1.jpeg" alt="">
-    <!-- esto enruta con un boton routlink (app) -->
-    <button ion-button fill="outline" [routerLink]="['/ver-asistencia']" class="btn">Asistencia</button>
+    <button ion-button fill="outline" *ngIf="rol=='profesor'" [routerLink]="['/qr']" class="btn2">Generar clase</button>
   </div>
 
+  <br> <br>
+  <div id="container" style="text-align: center;">
+    <button ion-button fill="outline" *ngIf="rol=='profesor'" [routerLink]="['/ver-asistencia']" class="btn">Ver lista asistencia</button>
+  </div>
+
+  <br> <br>
+  <div id="container" style="text-align: center;">
+    <button ion-button fill="outline" *ngIf="rol=='alumno'" [routerLink]="['/error404']" class="btn2">Generar clase</button>
+  </div>
+
+  <br> <br>
+  <div id="container" style="text-align: center;">
+    <button ion-button fill="outline" *ngIf="rol=='alumno'" [routerLink]="['/error404']" class="btn">Ver lista asistencia</button>
+  </div>
+
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <div id="container2" style="text-align: center;">
+    <img src="assets/img/duocPequeno.jpeg" alt="">
+  </div>
 
 </ion-content>

@@ -13,7 +13,7 @@
 
     <ion-item class="ion-margin-bottom">
       <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
-      <ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors">Password debe tener al menos 6 caracteres</ion-note>
+      <ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors">La contraseña debe tener al menos 6 caracteres</ion-note>
     </ion-item>
 
     <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>

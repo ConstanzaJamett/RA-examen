@@ -80,11 +80,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ver-clase/ver-clase.module').then( m => m.VerClasePageModule)
   },
 
+
   
   {
     path: '**',
     redirectTo: 'error404'
   },
+
 
 
 ];

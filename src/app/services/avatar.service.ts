@@ -135,7 +135,7 @@ export class AvatarService {
     } catch (error) {
       return false;
     }
-  } 
+  }
   
   getAsistencias(): Observable<Asistencia[]>{
     const usuariosRef = collection(this.firestore, 'asistencia');

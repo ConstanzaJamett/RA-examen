@@ -35,6 +35,8 @@ export class RegistrarClasePage implements OnInit {
     }
 
     ngOnInit() {
+      this.getRol1();
+      this.getUsuario1();
       this.getRol();
       this.getUsuario();
       console.log(this.getUsuario());
@@ -46,6 +48,18 @@ export class RegistrarClasePage implements OnInit {
         this.profile = respuesta
       });
     }
+
+    getRol1(){
+      this.avatarService.getUsuarioById1().subscribe(respuesta => {
+          this.rol = respuesta.perfil;
+      });
+    }
+
+    getUsuario1(){
+      this.avatarService.getUsuarioById1().subscribe(respuesta => {
+        this.usuario = respuesta;
+      });
+  }
 
     getRol(){
       this.avatarService.getUsuarioById().subscribe(respuesta => {

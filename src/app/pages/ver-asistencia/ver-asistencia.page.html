@@ -1,15 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Ver Asistencia</ion-title>
+    <ion-title>Lista de asistencia</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
   <ion-list>
     <ion-item *ngFor="let usuario of asistencia" >
       <ion-label>
-        <h3>{{usuario.nombreAlumno}} {{usuario.apellidoAlumno}} {{usuario.fecha}}</h3>
+        <h3>{{usuario.codigo}} | {{usuario.fecha}}</h3>
+        <h3>{{usuario.apellidoAlumno}} {{usuario.nombreAlumno}}</h3>
       </ion-label>
     </ion-item>
   </ion-list>
+
+  <br> <br>
+  <div id="container" style="text-align: center;">
+    <button ion-button fill="outline" [routerLink]="['/inicio']" class="btn">Volver al inicio</button>
+  </div> 
+  <br> <br> <br> <br>   
+  <div id="container2" style="text-align: center;">
+    <img src="assets/img/duocPequeno.jpeg" alt="">
+  </div>
+
+
 </ion-content>
