@@ -75,7 +75,14 @@ const routes: Routes = [
     path: 'ver-clase',
     loadChildren: () => import('./pages/ver-clase/ver-clase.module').then( m => m.VerClasePageModule)
   },
-
+  {
+    path: 'clima',
+    loadChildren: () => import('./pages/clima/clima.module').then( m => m.ClimaPageModule)
+  },
+  {
+    path: 'conversor',
+    loadChildren: () => import('./pages/conversor/conversor.module').then( m => m.ConversorPageModule)
+  },
 
   
   {
