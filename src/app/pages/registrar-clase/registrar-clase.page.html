@@ -7,18 +7,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content *ngIf="rol=='profesor'" [fullscreen]="true">
 
-  <ion-card>
-    <h2>Clases disponibles</h2>
-    <img src="" alt="">
-    <!-- <ion-button color= "warning" href="/home">Ir a home </ion-button> -->
-  </ion-card>
+  <div id="container" style="text-align: center;">
+    <img src="assets/img/QR1.jpeg" alt="">
+    <!-- esto enruta con un boton routlink (app) -->
+    <button ion-button fill="outline" [routerLink]="['/ver-asistencia']" class="btn">Asistencia</button>
+  </div>
 
-  <ion-card>
-    <h1>¡¡QR!!</h1>
-    <img src="" alt="">
-    <!-- <ion-button color= "warning" href="/home">Ir a home </ion-button> -->
-  </ion-card>
 
 </ion-content>

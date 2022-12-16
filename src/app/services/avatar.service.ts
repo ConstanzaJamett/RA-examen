@@ -5,7 +5,9 @@ import { getDownloadURL, ref, Storage, uploadString } from '@angular/fire/storag
 import { Photo } from '@capacitor/camera';
 import { base64 } from '@firebase/util';
 import { Observable } from 'rxjs';
-import { Usuario } from './usuario';
+import { Usuario, Asistencia } from './usuario';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -118,5 +120,20 @@ export class AvatarService {
     const usuarioDocRef = doc(this.firestore, `alumno/${this.auth.currentUser.uid}`);
     return docData(usuarioDocRef) as Observable<Usuario>;
   }
+
+  async addAsistencia(asistencia: Asistencia, usuario:Usuario){
+    try {
+        const userDocRef = collection(this.firestore,'asistencia');
+        await addDoc(userDocRef,{
+          nombreAlumno: usuario.nombre,
+          apellidoAlumno: usuario.apellido,
+          asignatura: usuario.asignatura,
+          fecha: asistencia.fecha
+        });
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }  
 
 }

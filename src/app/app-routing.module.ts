@@ -59,11 +59,22 @@ const routes: Routes = [
     path: 'registrar-clase',
     loadChildren: () => import('./pages/registrar-clase/registrar-clase.module').then( m => m.RegistrarClasePageModule)
   },
+  {
+    path: 'ver-asistencia',
+    loadChildren: () => import('./pages/ver-asistencia/ver-asistencia.module').then( m => m.VerAsistenciaPageModule)
+  },
+  {
+    path: 'asistencia',
+    loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
+  },
+
+
   
   {
     path: '**',
     redirectTo: 'error404'
   },
+
 
 
 ];

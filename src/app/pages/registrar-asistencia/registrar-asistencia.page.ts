@@ -1,4 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Camera } from '@capacitor/camera';
+import { CameraResultType, CameraSource } from '@capacitor/camera/dist/esm/definitions';
+import { AlertController, LoadingController, ToastController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
+import { AvatarService } from 'src/app/services/avatar.service';
+import { Usuario } from 'src/app/services/usuario';
+import { Auth } from '@angular/fire/auth';
+// import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-registrar-asistencia',
@@ -7,9 +16,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarAsistenciaPage implements OnInit {
 
-  constructor() { }
+  profile:any=null;
+  usuario: Usuario = null;
+  @Input() id :string;
+  modalCtrl: any;
+  rol:string = '';
 
-  ngOnInit() {
+  constructor(private authService:AuthService,
+    private avatarService:AvatarService,
+    private loadingCtrl:LoadingController,
+    private alertCtrl:AlertController,
+    private toastCtrl:ToastController,
+    // private usuarioService:UsuarioService,
+    private auth:Auth,
+    private router:Router) {
+        this.loadProfile();
+
+    }
+
+    ngOnInit() {
+      this.getRol1();
+      this.getUsuario1();
+      console.log(this.getUsuario1());
+
+    }
+
+    loadProfile(){
+      this.avatarService.getUserProfile1().subscribe(respuesta => {
+        this.profile = respuesta
+      });
+    }
+
+    getRol1(){
+      this.avatarService.getUsuarioById1().subscribe(respuesta => {
+          this.rol = respuesta.perfil;
+      });
+    }
+
+    getUsuario1(){
+      this.avatarService.getUsuarioById1().subscribe(respuesta => {
+        this.usuario = respuesta;
+      });
   }
-
 }
+

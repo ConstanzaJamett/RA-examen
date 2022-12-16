@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="container">
+    <ion-list>
+      <ion-label>
+        Fecha:<ion-input disabled="true" type="text" [(ngModel)]="asistencia.fecha"></ion-input>
+      </ion-label>
+    </ion-list>
+  </div>
+
+  <div id="container" style="text-align: center;">
+    <!-- <img src="assets/img/QR1.jpeg" alt=""> -->
+    <button ion-button fill="outline" class="btn" (click)="addAsistencia()">Guardar asistencia</button>
+  </div>
+
+</ion-content>
