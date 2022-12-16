@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear cuenta Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="avatar">
+    <ion-avatar (click)="uploadAvatar()">
+      <!-- <img *ngIf="profile?.image; else placeholder_avatar;" [src]="profile.image" /> -->
+      <ng-template #placeholder_avatar>
+      </ng-template>
+    </ion-avatar>
+  </div>
+
+<div>
+  <label>
+    Run:
+    <ion-input type="text" [(ngModel)]="usuario.run"></ion-input>
+  </label>
+  <label>
+    Nombre:
+    <ion-input type="text" [(ngModel)]="usuario.nombre"></ion-input>
+  </label>
+  <label>
+    Apellido:
+    <ion-input type="text" [(ngModel)]="usuario.apellido"></ion-input>
+  </label>
+  <label>
+    Edad:
+    <ion-input type="number" [(ngModel)]="usuario.anios"></ion-input>
+  </label>
+  <label>
+    Email:
+    <ion-input type="text" [(ngModel)]="usuario.email"></ion-input>
+  </label>
+  <label>
+    Asignatura:
+    <ion-input type="text" [(ngModel)]="usuario.asignatura"></ion-input>
+  </label>
+  <label>
+    imagen:
+    <ion-avatar (click)="uploadAvatar()">
+      <ion-icon name="images"></ion-icon>
+    </ion-avatar>
+    <ion-input type="text" [(ngModel)]="usuario.imagen"></ion-input>
+  </label>
+</div>
+
+<!-- <ion-button expand="block" color="success" (click)="addProfesor()" >
+  Guardar profesor
+</ion-button> -->
+<ion-button expand="block" color="success" (click)="addAlumno()" >
+  Guardar alumno
+</ion-button>
+</ion-content>

@@ -57,7 +57,7 @@ export class LoginPage implements OnInit {
     await loading.dismiss();
 
     if(user){
-      this.router.navigateByUrl('/home',{replaceUrl:true});
+      this.router.navigateByUrl('/cuenta-alumno',{replaceUrl:true});
     }
     else{
       this.alertPresent('Registro fallido','Datos ingresados incorrectos.');

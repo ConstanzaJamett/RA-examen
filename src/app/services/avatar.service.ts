@@ -28,10 +28,9 @@ export class AvatarService {
       return docData(userDocRef);
     }
 
-    async addUsuario(usuario: Usuario){
+    async addProfesor(usuario: Usuario){
       const user = this.auth.currentUser;
       try {
-        if(usuario.perfil == 'profesor'){
           const userDocRef = doc(this.firestore,`profesor/${user.uid}`);
           await setDoc(userDocRef,{
             rut: usuario.run,
@@ -43,8 +42,17 @@ export class AvatarService {
             asignatura: usuario.asignatura,
             perfil: usuario.perfil
           });
-        }
-        else if(usuario.perfil == 'alumno'){
+        
+
+        return true;
+      } catch (error) {
+        return false;
+      }
+    }
+
+    async addAlumno(usuario: Usuario){
+      const user = this.auth.currentUser;
+      try {
           const userDocRef = doc(this.firestore,`alumno/${user.uid}`);
           await setDoc(userDocRef,{
             rut: usuario.run,
@@ -56,12 +64,14 @@ export class AvatarService {
             asignatura: usuario.asignatura,
             perfil: usuario.perfil
           });
-        }
+        
+
         return true;
       } catch (error) {
         return false;
       }
     }
+
     getUser(){
       const user = this.auth.currentUser;
       return user.uid;

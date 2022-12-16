@@ -48,6 +48,19 @@ const routes: Routes = [
     loadChildren: () => import('./pages/portada-app/portada-app.module').then( m => m.PortadaAppPageModule)
   },
   {
+    path: 'cuenta-profesor',
+    loadChildren: () => import('./pages/cuenta-profesor/cuenta-profesor.module').then( m => m.CuentaProfesorPageModule)
+  },
+  {
+    path: 'cuenta-alumno',
+    loadChildren: () => import('./pages/cuenta-alumno/cuenta-alumno.module').then( m => m.CuentaAlumnoPageModule)
+  },
+  {
+    path: 'registrar-clase',
+    loadChildren: () => import('./pages/registrar-clase/registrar-clase.module').then( m => m.RegistrarClasePageModule)
+  },
+  
+  {
     path: '**',
     redirectTo: 'error404'
   },
