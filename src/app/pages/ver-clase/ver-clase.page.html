@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ver clase</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="container" style="text-align: center;">
+    <button ion-button fill="outline" (click)="uploadAvatar()" class="btn">Leer QR</button>
+  </div>
+
+  <div id="container" style="text-align: center;">
+    <button ion-button fill="outline" [routerLink]="['/asistencia']" class="btn">Anotar código</button>
+  </div>
+
+</ion-content>

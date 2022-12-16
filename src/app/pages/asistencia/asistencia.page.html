@@ -9,6 +9,18 @@
   <div class="container">
     <ion-list>
       <ion-label>
+        Código:<ion-input type="text" [(ngModel)]="asistencia.codigo"></ion-input>
+      </ion-label>      
+      <ion-label>
+        Nombre alumno:<ion-input type="text" [(ngModel)]="asistencia.nombreAlumno"></ion-input>
+      </ion-label>
+      <ion-label>
+        Apellido alumno:<ion-input type="text" [(ngModel)]="asistencia.apellidoAlumno"></ion-input>
+      </ion-label>
+      <ion-label>
+        Asignatura:<ion-input type="text" [(ngModel)]="asistencia.asignatura"></ion-input>
+      </ion-label>
+      <ion-label>
         Fecha:<ion-input disabled="true" type="text" [(ngModel)]="asistencia.fecha"></ion-input>
       </ion-label>
     </ion-list>

@@ -37,6 +37,8 @@ export class RegistrarAsistenciaPage implements OnInit {
     ngOnInit() {
       this.getRol1();
       this.getUsuario1();
+      this.getRol();
+      this.getUsuario();
       console.log(this.getUsuario1());
 
     }
@@ -55,6 +57,18 @@ export class RegistrarAsistenciaPage implements OnInit {
 
     getUsuario1(){
       this.avatarService.getUsuarioById1().subscribe(respuesta => {
+        this.usuario = respuesta;
+      });
+  }
+
+    getRol(){
+      this.avatarService.getUsuarioById().subscribe(respuesta => {
+          this.rol = respuesta.perfil;
+      });
+    }
+
+    getUsuario(){
+      this.avatarService.getUsuarioById().subscribe(respuesta => {
         this.usuario = respuesta;
       });
   }

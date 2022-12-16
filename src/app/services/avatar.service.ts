@@ -125,15 +125,23 @@ export class AvatarService {
     try {
         const userDocRef = collection(this.firestore,'asistencia');
         await addDoc(userDocRef,{
-          nombreAlumno: usuario.nombre,
-          apellidoAlumno: usuario.apellido,
-          asignatura: usuario.asignatura,
+          codigo: asistencia.codigo,
+          nombreAlumno: asistencia.nombreAlumno,
+          apellidoAlumno: asistencia.apellidoAlumno,
+          asignatura: asistencia.asignatura,
           fecha: asistencia.fecha
         });
       return true;
     } catch (error) {
       return false;
     }
-  }  
+  } 
+  
+  getAsistencias(): Observable<Asistencia[]>{
+    const usuariosRef = collection(this.firestore, 'asistencia');
+    return collectionData(usuariosRef, {idField:'id'}) as Observable<Asistencia[]>;
+  }
+
+  
 
 }

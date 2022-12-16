@@ -67,14 +67,24 @@ const routes: Routes = [
     path: 'asistencia',
     loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
   },
-
+  {
+    path: 'qr',
+    loadChildren: () => import('./pages/qr/qr.module').then( m => m.QrPageModule)
+  },
+  {
+    path: 'codigo',
+    loadChildren: () => import('./pages/codigo/codigo.module').then( m => m.CodigoPageModule)
+  },
+  {
+    path: 'ver-clase',
+    loadChildren: () => import('./pages/ver-clase/ver-clase.module').then( m => m.VerClasePageModule)
+  },
 
   
   {
     path: '**',
     redirectTo: 'error404'
   },
-
 
 
 ];

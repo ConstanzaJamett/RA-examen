@@ -13,6 +13,7 @@ export interface Usuario{
 
 export interface Asistencia{
     id?: string;
+    codigo: string;
     nombreAlumno: string;
     apellidoAlumno: string;    
     asignatura: string;

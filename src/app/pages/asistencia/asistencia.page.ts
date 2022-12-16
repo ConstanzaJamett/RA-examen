@@ -18,6 +18,7 @@ export class AsistenciaPage implements OnInit {
   rut:string;
 
   asistencia : Asistencia = {
+    codigo: '',
     nombreAlumno: '',
     apellidoAlumno: '',
     asignatura: '',

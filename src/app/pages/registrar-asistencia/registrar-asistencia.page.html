@@ -7,12 +7,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="rol=='alumno'" [fullscreen]="true">
+<ion-content [fullscreen]="true">
 
   <div id="container" style="text-align: center;">
     <!-- <img src="assets/img/QR1.jpeg" alt=""> -->
-    <button ion-button fill="outline" [routerLink]="['/asistencia']" class="btn">Ver clases</button>
+    <button ion-button fill="outline" *ngIf="rol=='alumno'" [routerLink]="['/ver-clase']" class="btn">Ver clases</button>
   </div>
 
-
+  <div id="container" style="text-align: center;">
+    <!-- <img src="assets/img/QR1.jpeg" alt=""> -->
+    <button ion-button fill="outline" *ngIf="rol=='profesor'" [routerLink]="['/error404']" class="btn">Ver clases</button>
+  </div>
+  
 </ion-content>
