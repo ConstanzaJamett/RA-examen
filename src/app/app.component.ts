@@ -21,6 +21,7 @@ export class AppComponent {
 
 
   public appPages = [
+    { title: 'Inicio', url: 'inicio', icon: 'home' },
     { title: 'Registrar asistencia', url: 'registrar-asistencia', icon: 'copy' },
     { title: 'Registrar clase', url: 'registrar-clase', icon: 'copy' },
     { title: 'Api Conversor', url: 'api-conversor', icon: 'cash' },

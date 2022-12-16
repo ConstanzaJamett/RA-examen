@@ -7,12 +7,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
 
-  <ion-card>
-    <h1>¡¡Bienvenido a RegistrApp!!</h1>
-    <img src="" alt="">
-    <!-- <ion-button color= "warning" href="/home">Ir a home </ion-button> -->
-  </ion-card>
+  <br>
+  <div id="container" style="text-align: center;">
+    <img src="assets/img/Home2.jpeg" alt="">
+  </div>
+  
+  <br> 
+  <div id="container" style="text-align: center;">
+    <button ion-button fill="outline" [routerLink]="['/registrar-clase']" class="btn">Soy profesor</button>
+  </div>
+  <br>
+  <div id="container" style="text-align: center;">
+    <button ion-button fill="outline" [routerLink]="['/registrar-asistencia']" class="btn">Soy alumno</button>
+  </div>
 
 </ion-content>
